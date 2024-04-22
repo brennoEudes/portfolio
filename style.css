@@ -82,3 +82,15 @@ body {
   outline: none; /* Remove a borda de foco padrão */
 }
 
+#profile-img {
+  max-width: 100%;
+  height: auto;
+
+  aspect-ratio: 16/9; /* PROPORÇÃO da img*/
+  object-fit: cover;
+
+  border-radius: 1.6rem;
+
+  /* transition: all 300ms ease-out; */
+}
+
