@@ -15,3 +15,8 @@ body {
   font-size: 1.6rem;
   font-family: "Inter", sans-serif;
 }
+
+.app {
+  background-color: #f5f5f4;
+  padding: 5rem;
+}
