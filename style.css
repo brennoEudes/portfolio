@@ -16,7 +16,65 @@ body {
   font-family: "Inter", sans-serif;
 }
 
+/* APP */
 .app {
   background-color: #f5f5f4;
-  padding: 5rem;
+  padding: 1.2rem;
 }
+
+/* HEADER */
+#touch-btn {
+  width: auto;
+  height: auto;
+  margin: 0;
+  padding: 1rem;
+
+  border: none;
+  border-radius: 50%;
+  /* border-radius: 9999px; */
+  background-color: #23ac0b; 
+  /* color: #4a5568; */
+  font-size: 1.8rem; 
+  font-weight: 600;
+
+  cursor: pointer;
+  
+  /* Defina as propriedades de exibição, posicionamento e z-index */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  right: 4rem;
+
+  /* Adicione efeitos de transição para uma animação suave */
+  /* transition: background-color 0.3s ease, color 0.3s ease;  */
+
+  img {
+    min-width: 2.4rem;
+    min-height: 2.4rem; 
+    /*margin-right: 8px; /* Pode ajustar a margem conforme necessário */
+  }
+}
+
+/* #touch-btn:hover {
+  background-color: #73eb5e; 
+  color: #000000;
+} */
+
+#touch-btn p {
+  display: none;
+}
+
+#touch-btn span {
+  /* Defina as propriedades de alinhamento, transformação e visibilidade */
+  /* display: block;
+  transform: translateY(100%);
+  visibility: hidden; */
+}
+
+/* Estilização do botão quando está em estado de foco ou ativo */
+#touch-btn:focus, #touch-btn:active {
+  outline: none; /* Remove a borda de foco padrão */
+}
+
