@@ -208,20 +208,6 @@ h2 {
   font-size: 1.8rem;
 }
 
-.tags {
-  margin-top: 1.2rem;
-}
-
-.tags span {
-  padding: 0.6rem;
-  background-color: var(--color-base-gray-100);
-  border-radius: 0.4rem;
-
-  line-height: 0;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
 /* SECTION-4 */
 h3 {
   font-size: 2.8rem;
@@ -365,6 +351,11 @@ footer {
 @media (min-width: 1024px) {
   h2 {
     font-size: 8rem;
+  }
+
+  .details h2 {
+    font-size: 2rem;
+    margin-top: 1.2rem;
   }
 }
 
