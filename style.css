@@ -252,3 +252,11 @@ h3 {
   background: rgba(255, 255, 255, 0.2);
 }
 
+/* FOOTER */
+footer {
+ text-align: center;
+
+ img {
+    width: 2rem;
+ }
+}
