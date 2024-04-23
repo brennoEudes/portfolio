@@ -259,6 +259,20 @@ h3 {
   margin: 2rem;
   padding: 2rem;
   border-radius: 1.6rem;
+
+  .award-title {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    margin-bottom: 2rem;
+
+    h3 {
+      font-size: 1.4rem;
+      margin: 0;
+      line-height: 2.4rem;
+    }
+  }
 }
 
 /* SECTION-6 */
