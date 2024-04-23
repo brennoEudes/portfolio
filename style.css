@@ -376,17 +376,6 @@ footer {
 }
 
 /* ANIMATIONS */
-@keyframes move {
-  from {
-    transform: translateY(
-      var(--startY)
-    ); /* Cria uma varíavel p/ animação referente ao eixo y */
-  }
-
-  to {
-  }
-}
-
 @keyframes appear {
   0% {
     opacity: 0;
