@@ -43,14 +43,14 @@ body {
   min-width: 8rem;
   min-height: 8rem;
   margin: 0;
-  padding: 1rem;
+  padding: .6rem 2.4rem;
 
   border: none;
   border-radius: 50%;
   /* border-radius: 9999px; */
   background-color: #23ac0b;
   /* color: #4a5568; */
-  font-size: 1.8rem;
+  font-size: 1.2rem;
   font-weight: 600;
 
   cursor: pointer;
@@ -78,6 +78,11 @@ body {
   background-color: #73eb5e; 
   color: #000000;
 } */
+
+#touch-btn {
+  padding: 1rem;
+
+}
 
 #touch-btn p {
   display: none;
@@ -124,7 +129,8 @@ h2 {
   font-size: 3.2rem;
 }
 
-#linkedin-btn {
+#linkedin-btn,
+#social-link-btn {
   position: inherit;
 
   background-color: white;
@@ -138,7 +144,7 @@ h2 {
   }
 }
 
-#linkedin-btn:hover {
+#linkedin-btn:hover, #social-link-btn:hover {
   background-color: #73eb5e;
   color: #000000;
 }
@@ -239,7 +245,6 @@ h3 {
   margin: 2rem;
   padding: 2rem;
   border-radius: 1.6rem;
-
 }
 
 /* SECTION-6 */
@@ -248,16 +253,13 @@ h3 {
   justify-content: center;
 }
 
-.section-6 a {
-  padding: 1.6rem;
-  background-color: white;
-  transition: background 0.2s;
+#social-link-btn {
+  padding: 0.6rem 2rem;
+  border: none;
 
-  border-radius: 50%; /* borda c/raio de 50% forma o círculo perfeito */
-}
-
-.section-6 a:hover {
-  background-color: #73eb5e;
+  img {
+    margin-right: 0;
+  }
 }
 
 /* FOOTER */
@@ -268,3 +270,5 @@ footer {
     width: 2rem;
   }
 }
+
+/* MEDIA QUERIES */
