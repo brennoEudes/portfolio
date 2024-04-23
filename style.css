@@ -251,11 +251,12 @@ h3 {
 .section-6 a {
   padding: 1.6rem;
   transition: background 0.2s;
+
   border-radius: 50%; /* borda c/raio de 50% forma o círculo perfeito */
 }
 
 .section-6 a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background-color: #73eb5e;
 }
 
 /* FOOTER */
