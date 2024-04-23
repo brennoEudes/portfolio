@@ -41,8 +41,8 @@ body {
 
 #touch-btn,
 #linkedin-btn {
-  width: auto;
-  height: auto;
+  min-width: 8rem;
+  min-height: 8rem;
   margin: 0;
   padding: 1rem;
 
@@ -62,14 +62,15 @@ body {
   justify-content: center;
 
   position: fixed;
-  right: 4rem;
+  right: 1rem;
+  bottom: 2rem;
 
   /* Adicione efeitos de transição para uma animação suave */
   /* transition: background-color 0.3s ease, color 0.3s ease;  */
 
   img {
-    min-width: 2.4rem;
-    min-height: 2.4rem;
+    min-width: 4rem;
+    min-height: 4rem;
     /*margin-right: 8px; /* Pode ajustar a margem conforme necessário */
   }
 }
