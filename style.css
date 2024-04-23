@@ -250,6 +250,7 @@ h3 {
 
 .section-6 a {
   padding: 1.6rem;
+  background-color: white;
   transition: background 0.2s;
 
   border-radius: 50%; /* borda c/raio de 50% forma o círculo perfeito */
