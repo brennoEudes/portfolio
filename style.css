@@ -131,6 +131,8 @@ h2 {
   color: #4a5568;
   border-radius: 9999px;
 
+  cursor: pointer;
+
   transition: background-color 0.5s ease, color 0.5s ease;
   img {
     min-width: 2.4rem;
@@ -156,6 +158,8 @@ h2 {
   border-radius: 0.8rem;
 
   overflow: hidden; /* Ajusta a img c/ borda da caixa*/
+
+  cursor: pointer;
 
   /* --delay: .4s;
   animation: appear 2s var(--delay) backwards; backwards puxa as definições do início da animação para o item. Como há o delay, as img já comecam do ponto menor e depois aumentam */
