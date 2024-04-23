@@ -54,7 +54,7 @@ body {
   bottom: 2rem;
 
   /* Adicione efeitos de transição para uma animação suave */
-  /* transition: background-color 0.3s ease, color 0.3s ease;  */
+  transition: background-color .5s ease, color .5s ease; 
 
   img {
     min-width: 4rem;
@@ -63,24 +63,12 @@ body {
   }
 }
 
-/* #touch-btn:hover {
-  background-color: #73eb5e; 
-  color: #000000;
-} */
-
 #touch-btn {
   padding: 1rem;
 }
 
 #touch-btn p {
   display: none;
-}
-
-#touch-btn span {
-  /* Defina as propriedades de alinhamento, transformação e visibilidade */
-  /* display: block;
-  transform: translateY(100%);
-  visibility: hidden; */
 }
 
 /* Estilização do botão quando está em estado de foco ou ativo */
@@ -99,6 +87,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 4rem;
+  animation: appear-2 3s;
 }
 
 h1 {
@@ -130,11 +119,14 @@ h1 {
 #profile-img {
   max-width: 100%;
   height: auto;
+  margin: 0 auto;
 
   aspect-ratio: 16/9; /* PROPORÇÃO da img*/
   object-fit: cover;
 
   border-radius: 1.6rem;
+
+  animation: appear 3s;
 
   /* transition: all 300ms ease-out; */
 }
@@ -153,6 +145,7 @@ h2 {
   color: #4a5568;
   border-radius: 9999px;
 
+  transition: background-color .5s ease, color .5s ease; 
   img {
     min-width: 2.4rem;
     min-height: 2.4rem;
@@ -334,6 +327,12 @@ footer {
     font-size: 2rem;
   }
 
+  #profile-img {
+    max-width: 80%;
+    height: auto;
+    margin: 0 auto;
+  }
+
   h2 {
     font-size: 6rem;
     margin-bottom: 4rem;
@@ -373,5 +372,37 @@ footer {
   .gallery,
   .stacks-groups {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* ANIMATIONS */
+@keyframes move {
+  from {
+    transform: translateY(
+      var(--startY)
+    ); /* Cria uma varíavel p/ animação referente ao eixo y */
+  }
+
+  to {
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+@keyframes appear-2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
   }
 }
