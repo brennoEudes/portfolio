@@ -233,21 +233,32 @@ h3 {
   line-height: 4.2rem;
 }
 
+.stacks-groups {
+  display: grid;
+  gap: 4rem;
+}
+
+.frontend, .backend, .marketing {
+  
+}
+
 .stacks-elements {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-}
-.section-4 span {
-  margin: 1rem;
-  padding: 0.4rem 2rem;
+  gap: 1.6rem;
 
-  background-color: white;
-  border-radius: 9999px;
-
-  font-weight: 600;
-  line-height: 3.6rem;
+  span {
+    padding: 0.4rem 2rem;
+  
+    background-color: white;
+    border-radius: 9999px;
+  
+    font-weight: 600;
+    line-height: 3.6rem;
+  }
 }
+
 
 /* SECTION-5 */
 .awards-container {
@@ -301,3 +312,14 @@ footer {
 }
 
 /* MEDIA QUERIES */
+@media (min-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(3, 1fr); 
+  }
+
+  .stacks-groups {
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+  
+
