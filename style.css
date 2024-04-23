@@ -26,18 +26,7 @@ body {
   gap: 6rem;
 }
 
-/* SECTION-1 */
-.section-1,
-.section-2,
-.section-3,
-.section-4,
-.section-5,
-.section-6 {
-  display: flex;
-  flex-direction: column;
-  gap: 4rem;
-}
-
+/* HEADER */
 #touch-btn,
 #linkedin-btn {
   min-width: 8rem;
@@ -98,6 +87,31 @@ body {
 #touch-btn:focus,
 #touch-btn:active {
   outline: none; /* Remove a borda de foco padrão */
+}
+
+/* SECTION-1 */
+.section-1,
+.section-2,
+.section-3,
+.section-4,
+.section-5,
+.section-6 {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+
+  font-size: 1.2rem;
+
+  img {
+    max-width: 1.6rem;
+    max-height: 1.6rem;
+  }
 }
 
 #profile-img {
@@ -252,7 +266,6 @@ h3 {
   flex-direction: row;
   justify-content: center;
   gap: 2rem;
-
 }
 
 #social-link-btn {
