@@ -210,12 +210,13 @@ h2 {
 
 /* SECTION-4 */
 h3 {
-  margin: 2rem;
+  margin: 2rem 0rem;
 }
 
 .stacks-elements {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
 }
 .section-4 span {
   margin: 1rem;
@@ -226,4 +227,9 @@ h3 {
 
   font-weight: 600;
   line-height: 3.6rem;
+}
+
+/* SECTION-5 */
+.award-info {
+
 }
