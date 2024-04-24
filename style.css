@@ -189,7 +189,7 @@ h2 {
 }
 
 .item img:hover {
-  filter: hue-rotate(7deg) contrast(101%) saturate(200%);
+  filter: hue-rotate(7deg);
   transform: scale(1.1) rotate(-2deg);
 }
 
