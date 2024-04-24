@@ -23,7 +23,6 @@ body {
   padding: 8rem 2rem 2rem 2rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 4rem;
 }
 
@@ -70,15 +69,15 @@ body {
   h1 {
     font-size: 3rem;
     font-weight: 700;
-    text-align: center;
     line-height: 4rem;
   }
 }
 
 .subpage-carrossel {
   display: grid;
-  flex-wrap: wrap;
+  place-items: center;
   gap: 4rem;
+
 
   img {
     max-width: 100%;
@@ -94,7 +93,6 @@ body {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  align-items: center;
 
   max-width: 80%;
 
@@ -106,13 +104,10 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
-    align-items: center;
   }
 
   .external-site {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 0.6rem;
 
     img {
@@ -127,10 +122,6 @@ body {
       color: black;
     }
   }
-
-  p {
-    text-align: center;
-  }
 }
 
 /* FOOTER */
@@ -144,6 +135,7 @@ footer {
 
 @media (min-width: 768px) {
   .app-subpage {
+    place-items: center;
     gap: 6rem;
   }
 
@@ -156,6 +148,7 @@ footer {
   .subpage-carrossel {
     grid-template-columns: repeat(2, 1fr);
     max-width: 80%;
+    margin: 0 auto;
 
     animation: appear 3s;
 
@@ -169,10 +162,7 @@ footer {
     }
 
     .external-site {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.6rem;
+        gap: 1rem;
     
         img {
           max-width: 20%;
