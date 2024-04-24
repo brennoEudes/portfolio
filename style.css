@@ -151,6 +151,10 @@ h2 {
 .gallery {
   display: grid;
   gap: 2rem;
+
+  a {
+    text-decoration: none;
+  }
 }
 
 .item {
@@ -190,12 +194,13 @@ h2 {
 }
 
 .details {
-  padding: 2.2rem;
+  padding: 1rem;
+
+  h2 {
+    font-size: 1.8rem;
+  }
 }
 
-.details h2 {
-  font-size: 1.8rem;
-}
 
 /* SECTION-4 */
 h3 {
