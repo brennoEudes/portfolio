@@ -27,6 +27,10 @@ body {
   gap: 4rem;
 }
 
+#back-btn, .subpage-title, .subpage-content {
+    animation: appear-2 2s;
+}
+
 #back-btn {
   text-decoration: none;
   border: none;
@@ -152,6 +156,9 @@ footer {
   .subpage-carrossel {
     grid-template-columns: repeat(2, 1fr);
     max-width: 80%;
+
+    animation: appear 3s;
+
   }
 
   .subpage-content {
@@ -171,17 +178,6 @@ footer {
           max-width: 20%;
           max-height: auto;
         }
-    
-        a {
-          font-size: 1.8rem;
-        }
-      }
-    
-      p {
-        font-size: 2rem;
-        line-height: 3.6rem;
-      }
-    
   }
 }
 
@@ -189,5 +185,27 @@ footer {
 
   .subpage-carrossel {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ANIMATIONS */
+@keyframes appear {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+  
+    50% {
+      transform: scale(1.1);
+    }
+  }
+  
+  @keyframes appear-2 {
+    0% {
+      opacity: 0;
+    }
+  
+    100% {
+    }
   }
 }
