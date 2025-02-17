@@ -26,8 +26,10 @@ body {
   gap: 4rem;
 }
 
-#back-btn, .subpage-title, .subpage-content {
-    animation: appear-2 2s;
+#back-btn,
+.subpage-title,
+.subpage-content {
+  animation: appear-2 2s;
 }
 
 #back-btn {
@@ -73,11 +75,14 @@ body {
   }
 }
 
+#medico-campaign-title {
+  font-size: 2rem;
+}
+
 .subpage-carrossel {
   display: grid;
   place-items: center;
   gap: 4rem;
-
 
   img {
     max-width: 100%;
@@ -89,12 +94,25 @@ body {
   }
 }
 
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 700px; /* Limits video width on big screens */
+  margin: 0 auto; /* Centers the video */
+  aspect-ratio: 16 / 9; /* Keeps correct aspect ratio */
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+}
+
 .subpage-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-
-  max-width: 80%;
 
   h2 {
     font-size: 2.8rem;
@@ -124,6 +142,34 @@ body {
   }
 }
 
+.subpage-content-img {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  margin: 0 auto;
+}
+
+#text-img {
+  max-width: 80%;
+  aspect-ratio: 1;
+  margin: 0 auto;
+
+  object-fit: cover;
+  border-radius: 50%;
+
+  animation: appear 3s;
+}
+
+span {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
 /* FOOTER */
 footer {
   text-align: center;
@@ -139,10 +185,12 @@ footer {
     gap: 6rem;
   }
 
-  .subpage-title {
-    h1 {
-      font-size: 5rem;
-    }
+  .subpage-title h1 {
+    font-size: 5rem;
+  }
+
+  #medico-campaign-title {
+    font-size: 5rem;
   }
 
   .subpage-carrossel {
@@ -151,7 +199,6 @@ footer {
     margin: 0 auto;
 
     animation: appear 3s;
-
   }
 
   .subpage-content {
@@ -162,39 +209,42 @@ footer {
     }
 
     .external-site {
-        gap: 1rem;
-    
-        img {
-          max-width: 20%;
-          max-height: auto;
-        }
+      gap: 1rem;
+
+      img {
+        max-width: 20%;
+        max-height: auto;
+      }
+    }
   }
-}
 
-@media (min-width: 1024px) {
+  @media (min-width: 1024px) {
+    .subpage-carrossel {
+      grid-template-columns: repeat(4, 1fr);
+    }
 
-  .subpage-carrossel {
-    grid-template-columns: repeat(4, 1fr);
+    #text-img {
+      max-width: 60%;
+    }
   }
-}
 
-/* ANIMATIONS */
-@keyframes appear {
+  /* ANIMATIONS */
+  @keyframes appear {
     0% {
       opacity: 0;
       transform: scale(0.9);
     }
-  
+
     50% {
       transform: scale(1.1);
     }
   }
-  
+
   @keyframes appear-2 {
     0% {
       opacity: 0;
     }
-  
+
     100% {
     }
   }

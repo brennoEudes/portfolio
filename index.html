@@ -19,6 +19,9 @@
     <link rel="stylesheet" href="./style.css" />
 
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="./src/js/timezone.js" defer></script>
+    <script src="./src/js/fadeElements.js" defer></script>
+    <script src="./src/js/galleriesControl.js" defer></script>
   </head>
   <body>
     <div class="app">
@@ -27,109 +30,236 @@
           href="https://wa.me/5521988537003?text=Hi,%20Brenno!%20How%20are%20you?%20I%20saw%20your%20portfolio%20and%20I%20would%20like%20to%20talk%20about%20an%20opportunity!"
         >
           <button id="touch-btn">
-            <img src="./assets/whatsapp-logo-white.svg" alt="whatsapp-logo" />
+            <img
+              class="shake"
+              src="./assets/whatsapp-brands-solid.svg"
+              alt="whatsapp-logo"
+            />
           </button>
         </a>
       </header>
       <section class="section-1">
-        <h1>👋 Hi, I'm Brenno!</h1>
-        <p>
-          — "Over a decade of selling digital products as marketer, I am now
-          capable of creating new ones as software developer!"
-        </p>
-        <div class="location">
-          <img src="./assets/map-pin.svg" alt="Map icon" />
-          <p>Based in Rio de Janeiro, Brasil.</p>
+        <div id="profile-data">
+          <h1>👋 Hi, I'm Brenno!</h1>
+          <p>
+            — "Combining creativity and web development to create awesome
+            digital products!"
+          </p>
+          <div class="timezone-info">
+            <div class="location">
+              <img src="./assets/map-pin.svg" alt="Map icon" />
+              <p>Based in Rio de Janeiro, Brasil.</p>
+            </div>
+            <div id="clock">
+              <p>Loading timezone...</p>
+            </div>
+          </div>
         </div>
         <img
           id="profile-img"
-          src="./assets/20220925_145328.jpg"
-          alt="Brenno Eudes cover"
+          src="./assets/images/profile-img.png"
+          alt="Brenno Eudes image cover"
         />
       </section>
-      <section class="section-2">
+      <section class="section-2 visible">
         <h2>— About</h2>
-        <p>
-          Hi! I am Brazilian innovative Frontend Developer & Marketing
-          Strategist.
-          <br />
-          I'm a creative and results-driven professional, passionate about
-          crafting seamless digital experiences at the intersection of frontend
-          development and marketing strategy, to drive business growth.
-          <br />
-          Some examples include: Transformed Portugal Tech Week's digital
-          presence by updating 17+ responsive webpages, enhancing user
-          engagement and festival visibility;
-          <br />
-          Accelerated the growth of Complear's platform, developing new features
-          and structuring relations between front-end, back-end, and the
-          database.
-          <br />
-          Spearheaded WinSocial's branding efforts, reaching 1.7 million users
-          with chronic diseases and securing almost 29% of annual life insurance
-          sales.
-          <br />
-          I am enthusiastic about exploring new opportunities at the
-          intersection of frontend development and marketing strategy.
-        </p>
-        <a href="https://www.linkedin.com/in/brennoeudes/" target="_blank">
-          <button id="linkedin-btn">
-            <img src="./assets/linkedin-logo.svg" alt="LinkedIn-logo" />
-            <p>LinkedIn</p>
-          </button>
-        </a>
+        <div>
+          <p>
+            I’m Brenno Eudes, an innovative Brazilian marketing strategist with
+            over 12 years in creating and selling digital products, and a
+            software developer who has gained expertise over the last two years.
+            <br />
+            A creative and results-driven professional, I specialized in
+            crafting seamless digital experiences at the intersection of
+            marketing strategy and frontend development to drive business
+            growth. Some examples include:
+          </p>
+          <div class="achivements-group">
+            <div class="achivement">
+              <img
+                id="achivements-icon"
+                src="./assets/rocket-launch.svg"
+                alt="star icon"
+              />
+              <p>
+                Transformed Portugal Tech Week's digital presence by creating
+                and enhancing user experiences across 17 responsive web pages,
+                contributing to €21,410 in media value (ROI).
+              </p>
+            </div>
+
+            <div class="achivement">
+              <img
+                id="achivements-icon"
+                src="./assets/rocket-launch.svg"
+                alt="star icon"
+              />
+              <p>
+                Cultivated partnerships with over 40 digital influencers,
+                leading to a 143% increase in the engagement rate on social
+                media platforms.
+              </p>
+            </div>
+            <div class="achivement">
+              <img
+                id="achivements-icon"
+                src="./assets/rocket-launch.svg"
+                alt="star icon"
+              />
+              <p>
+                Spearheaded WinSocial's branding efforts, reaching 1.7 million
+                users with chronic diseases and securing almost 29% of annual
+                life insurance sales.
+              </p>
+            </div>
+          </div>
+          <a href="https://www.linkedin.com/in/brennoeudes/" target="_blank">
+            <button id="linkedin-btn">
+              <img src="./assets/linkedin-logo.svg" alt="LinkedIn-logo" />
+              <p>LinkedIn</p>
+            </button>
+          </a>
+        </div>
       </section>
-      <section class="section-3">
+      <section class="section-3 visible">
         <h2>— Featured work</h2>
-        <div class="developer-works">
+        <div class="featured-work">
+          <div class="switch-infos">
+            <span class="ad-option">Ad Campaigns</span>
+            <div id="switch">
+              <button
+                id="toggleGallery"
+                aria-label="Toggle Gallery View"
+              ></button>
+              <span></span>
+            </div>
+            <span>Frontend Projects</span>
+          </div>
           <div class="container">
             <section class="gallery">
-              <a href="./src/pages/ptw.html">
-                <figure class="item">
+              <a href="./src/pages/eletrico-pitch.html">
+                <figure class="item-2">
                   <img
                     src="./assets/images/ptw-cover.png"
+                    alt="Elétrico Pitch cover"
+                  />
+                  <!-- API de imagens gratuitas! -->
+                  <figcaption class="details-2">
+                    <h4>Elétrico Pitch</h4>
+                  </figcaption>
+                </figure>
+              </a>
+              <a href="./src/pages/techrun.html">
+                <figure class="item-2" style="--delay: 0.8s">
+                  <!-- Puxa a propriedade delay (0.4s) definida p/ animação. -->
+                  <img
+                    src="./assets/images/tech-run-2.jpg"
+                    alt="Tech Run cover"
+                  />
+                  <!-- API de imagens gratuitas! -->
+                  <figcaption class="details-2">
+                    <h4>Tech Run</h4>
+                  </figcaption>
+                </figure>
+              </a>
+              <a href="./src/pages/mothersDay.html">
+                <figure class="item-2" style="--delay: 1.2s">
+                  <img
+                    src="./assets/images/maes-ws-cover.jpg"
+                    alt="HangmAnimals cover"
+                  />
+                  <!-- API de imagens gratuitas! -->
+                  <figcaption class="details-2">
+                    <h4 id="personalized-title">Diabetes Mother's Day</h4>
+                  </figcaption>
+                </figure>
+              </a>
+              <a href="./src/pages/cashbetes.html">
+                <figure class="item-2" style="--delay: 1.6s">
+                  <img
+                    src="./assets/images/cashbetes-cover.png"
+                    alt="Pomodoro cover"
+                  />
+                  <!-- API de imagens gratuitas! -->
+                  <figcaption class="details-2">
+                    <h4>CashBetes</h4>
+                  </figcaption>
+                </figure>
+              </a>
+
+              <a
+                href="./src/pages/ws-movement.html
+              "
+              >
+                <figure class="item-2" style="--delay: 2s">
+                  <img src="./assets/images/movimento-ws-1.png" alt="WinSocial Movement cover" />
+                  <!-- API de imagens gratuitas! -->
+                  <figcaption class="details-2">
+                    <h4 id="personalized-title">WinSocial Movement</h4>
+                  </figcaption>
+                </figure>
+              </a>
+
+              <a href="./src/pages/medicoparaquemprecisa.html">
+                <figure class="item-2" style="--delay: 2.4s">
+                  <img
+                    src="./assets/images/consultas-gratis.jpg"
+                    alt="Flashcards cover"
+                  />
+                  <!-- API de imagens gratuitas! -->
+                  <figcaption class="details-2">
+                    <h4 id="personalized-title">#medicoParaQuemPrecisa</h4>
+                  </figcaption>
+                </figure>
+              </a>
+            </section>
+            <section class="gallery-2">
+              <a href="./src/pages/ptw.html">
+                <figure class="item-2">
+                  <img
+                    src="./assets/images/ptw-house.jpg"
                     alt="Portugal Tech Week cover"
                   />
                   <!-- API de imagens gratuitas! -->
-                  <figcaption class="details">
-                    <h2>Portugal Tech Week</h2>
+                  <figcaption class="details-2">
+                    <h4>Portugal Tech Week</h4>
                   </figcaption>
                 </figure>
               </a>
               <a href="./src/pages/ratepunk.html">
-                <figure class="item" style="--delay: 0.8s">
+                <figure class="item-2" style="--delay: 0.8s">
                   <!-- Puxa a propriedade delay (0.4s) definida p/ animação. -->
                   <img
                     src="./assets/images/ratepunk-cover.png"
                     alt="Ratepunk cover"
                   />
                   <!-- API de imagens gratuitas! -->
-                  <figcaption class="details">
-                    <h2>Ratepunk</h2>
+                  <figcaption class="details-2">
+                    <h4>Ratepunk</h4>
                   </figcaption>
                 </figure>
               </a>
               <a href="./src/pages/hanganimals.html">
-                <figure class="item" style="--delay: 1.2s">
+                <figure class="item-2" style="--delay: 1.2s">
                   <img
                     src="./assets/images/hangmanimals-cover.png"
                     alt="HangmAnimals cover"
                   />
                   <!-- API de imagens gratuitas! -->
-                  <figcaption class="details">
-                    <h2>HangmAnimals</h2>
+                  <figcaption class="details-2">
+                    <h4>HangmAnimals</h4>
                   </figcaption>
                 </figure>
               </a>
               <a href="./src/pages/pomodoro.html">
-                <figure class="item" style="--delay: 1.6s">
+                <figure class="item-2" style="--delay: 1.6s">
                   <img
                     src="./assets/images/pomodoro-cover.png"
                     alt="Pomodoro cover"
                   />
                   <!-- API de imagens gratuitas! -->
-                  <figcaption class="details">
-                    <h2>Pomodoro Timer</h2>
+                  <figcaption class="details-2">
+                    <h4>Pomodoro Timer</h4>
                   </figcaption>
                 </figure>
               </a>
@@ -138,24 +268,24 @@
                 href="./src/pages/vr-player.html
               "
               >
-                <figure class="item" style="--delay: 2s">
-                  <img src="./assets/images/vr-cover.png" alt="" />
+                <figure class="item-2" style="--delay: 2s">
+                  <img src="./assets/images/vr-1.png" alt="" />
                   <!-- API de imagens gratuitas! -->
-                  <figcaption class="details">
-                    <h2>Virtual Reality Player</h2>
+                  <figcaption class="details-2">
+                    <h4>Virtual Reality Player</h4>
                   </figcaption>
                 </figure>
               </a>
 
               <a href="./src/pages/flash.html">
-                <figure class="item" style="--delay: 2.4s">
+                <figure class="item-2" style="--delay: 2.4s">
                   <img
                     src="./assets/images/flash-cover.png"
                     alt="Flashcards cover"
                   />
                   <!-- API de imagens gratuitas! -->
-                  <figcaption class="details">
-                    <h2>FlashCards</h2>
+                  <figcaption class="details-2">
+                    <h4>FlashCards</h4>
                   </figcaption>
                 </figure>
               </a>
@@ -163,51 +293,64 @@
           </div>
         </div>
       </section>
-      <section class="section-4">
+      <section class="section-4 visible">
         <h2>— Tech stack</h2>
         <div class="stacks-groups">
+          <div class="marketing">
+            <h3>Marketing</h3>
+            <div class="stacks-elements">
+              <p>Strategy</p>
+              <p>Growth</p>
+              <p>Branding</p>
+              <p>Content</p>
+              <p>Copywriting</p>
+              <p>SEO</p>
+              <p>Email Marketing</p>
+              <p>CRM</p>
+              <p>Social Media</p>
+              <p>Influencers</p>
+              <p>Paid Media</p>
+              <p>Analytics</p>
+            </div>
+          </div>
           <div class="frontend">
             <h3>Frontend</h3>
             <div class="stacks-elements">
-              <span>Html</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
-              <span>React.js</span>
-              <span>SASS/SCSS</span>
-              <span>Tailwind CSS</span>
-              <span>UX/UI</span>
-              <span>Design System</span>
-              <span>Figma</span>
-              <span>Bootstrap</span>
+              <p>Html</p>
+              <p>CSS</p>
+              <p>JavaScript</p>
+              <p>React.js</p>
+              <p>SASS/SCSS</p>
+              <p>Tailwind CSS</p>
+              <p>UX/UI</p>
+              <p>Design System</p>
+              <p>Figma</p>
+              <p>Bootstrap</p>
             </div>
           </div>
           <div class="backend">
             <h3>Backend</h3>
             <div class="stacks-elements">
-              <span>Node.js</span>
-              <span>MongoDB</span>
-              <span>SQL</span>
-              <span>SQLite</span>
-            </div>
-          </div>
-          <div class="marketing">
-            <h3>Marketing</h3>
-            <div class="stacks-elements">
-              <span>Branding</span>
-              <span>Performance</span>
-              <span>SEO</span>
-              <span>Google Analytics</span>
-              <span>Google AdWords</span>
-              <span>Meta Ads</span>
-              <span>Social Media</span>
-              <span>Influencers</span>
+              <p>Node.js</p>
+              <p>MongoDB</p>
+              <p>SQLite</p>
             </div>
           </div>
         </div>
       </section>
-      <section class="section-5">
+      <section class="section-5 visible">
         <h2>— Awards</h2>
         <div class="awards-container">
+          <div class="award-info">
+            <div class="award-title">
+              <img src="./assets/trophy.svg" alt="Trophy icon" />
+              <h3>Web Summit 2022</h3>
+            </div>
+            <p>
+              Won a startup accelerator competition, enabling participation in
+              the Startup Alpha Stage at the Web Summit Lisbon 2022 event.
+            </p>
+          </div>
           <div class="award-info">
             <div class="award-title">
               <img src="./assets/trophy.svg" alt="Trophy icon" />
@@ -220,19 +363,9 @@
               (SBD).
             </p>
           </div>
-          <div class="award-info">
-            <div class="award-title">
-              <img src="./assets/trophy.svg" alt="Trophy icon" />
-              <h3>Web Summit 2022</h3>
-            </div>
-            <p>
-              Won a startup accelerator competition, enabling participation in
-              the Startup Alpha Stage at the Web Summit Lisbon 2022 event.
-            </p>
-          </div>
         </div>
       </section>
-      <section class="section-6">
+      <section class="section-6 visible">
         <a href="https://github.com/brennoEudes" target="_blank">
           <button id="social-link-btn">
             <img src="./assets/github-logo.svg" alt="Github logo" />
@@ -250,12 +383,12 @@
         </a>
       </section>
       <footer>
-        From
+        <span>From</span>
         <img
           src="./assets/christ-redeemer-icon-light-mode.png"
           alt="christ-redeemer-icon"
         />
-        to world.
+        <span>to world.</span>
       </footer>
     </div>
   </body>
