@@ -94,6 +94,14 @@ body {
   }
 }
 
+.subpage-carrossel iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 9 / 16; /* Mantém a proporção vertical */
+  border-radius: 0.4rem;
+  box-shadow: 1rem 1rem 2rem rgba(0, 0, 0, 0.3);
+}
+
 .video-container {
   display: flex;
   justify-content: center;
